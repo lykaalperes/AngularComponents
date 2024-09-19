@@ -1,0 +1,19 @@
+<div>
+  <h2>To-Do List</h2>
+  <form (ngSubmit)="addTask()" #todoForm="ngForm">
+    <input
+      type="text"
+      [(ngModel)]="newTask"
+      name="newTask"
+      placeholder="Enter a task"
+      required />&nbsp;&nbsp;
+    <button type="submit">Add Task</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let task of todoList; index as i">
+      {{ task }}
+      <button (click)="removeTask(i)">Remove</button>
+    </li>
+  </ul>
+</div>
