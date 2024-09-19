@@ -1,0 +1,30 @@
+<div>
+  <h2>Emoji Mood Tracker</h2>
+
+  <div class="emoji-picker">
+    <h3>Select Your Mood:</h3>
+    <div class="emojis">
+      <span *ngFor="let emoji of emojis"
+            (click)="selectMood(emoji)"
+            [class.selected]="selectedEmoji === emoji"
+            class="emoji">
+        {{ emoji }}
+      </span>
+    </div>
+  </div>
+
+  <div>
+    <h3>Your Selected Mood:</h3>
+    <div class="selected-emoji" *ngIf="selectedEmoji">
+      {{ selectedEmoji }}
+    </div>
+  </div>
+
+  <div *ngIf="moodHistory.length > 0">
+    <h3>Mood History:</h3>
+    <div class="mood-history">
+      <span *ngFor="let mood of moodHistory" class="emoji">{{ mood }}</span>
+    </div>
+    <button (click)="clearHistory()">Clear History</button>
+  </div>
+</div>
