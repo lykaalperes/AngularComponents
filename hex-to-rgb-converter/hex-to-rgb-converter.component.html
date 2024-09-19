@@ -1,0 +1,19 @@
+<div>
+  <h2>Hex to RGB Converter</h2>
+
+  <div>
+    <label for="hexCode">Enter Hex Color Code:</label>
+    <input type="text" [(ngModel)]="hexCode" id="hexCode" placeholder="#FFFFFF">
+  </div>
+
+  <button (click)="convertHexToRgb()">Convert</button>
+
+  <div *ngIf="rgbResult !== null">
+    <h3>RGB Result:</h3>
+    <p>{{ rgbResult }}</p>
+  </div>
+
+  <div *ngIf="rgbResult === null && hexCode && !isValidHex(hexCode)">
+    <h3>Invalid Hex Code. Please try again.</h3>
+  </div>
+</div>
