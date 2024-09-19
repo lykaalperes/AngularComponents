@@ -1,0 +1,15 @@
+<form (ngSubmit)="addBookmark()" #bookmarkForm="ngForm">
+  <div><br>
+    <label for="url">Enter URL:</label>&nbsp;&nbsp;
+    <input type="url" id="url" [(ngModel)]="url" name="url" required placeholder="https://example.com" />
+  </div>
+  <br>
+
+  <button type="submit">Add Bookmark</button>
+</form>
+
+<ul>
+  <li *ngFor="let bookmark of bookmarks">
+    <a [href]="bookmark" target="_blank">{{ bookmark }}</a>
+  </li>
+</ul>
