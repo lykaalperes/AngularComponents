@@ -38,3 +38,6 @@
 ## OUTPUT OF THE ANGULAR COMPONENTS
 
 ![ezgif-2-53387236e4](https://github.com/user-attachments/assets/85caa62c-213f-4b92-8d1a-b90c549845f1)
+
+
+ps. ayaw na po mag-push ng buong file dito sir, pagod na raw po siya. ni-zip file ko na lang po. sana okay lang po yon, hehe. salamat po.
