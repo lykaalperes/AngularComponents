@@ -1,0 +1,12 @@
+<form (ngSubmit)="generateGreeting()" #userGreetingForm="ngForm">
+  <br> <div>
+    <label for="name">Enter your name:</label>&nbsp;&nbsp;
+    <input type="text" id="name" [(ngModel)]="name" name="name" required />
+  </div>
+  <br>
+  <button type="submit">Generate Greeting</button>
+</form>
+
+<div *ngIf="greeting">
+  <h3>{{ greeting }}</h3>
+</div>
