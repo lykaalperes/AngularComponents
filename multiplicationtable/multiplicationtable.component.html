@@ -1,0 +1,17 @@
+<form (ngSubmit)="generateTable()" #tableForm="ngForm">
+  <div><br>
+    <label for="number">Enter a number:</label>&nbsp;&nbsp;
+    <input type="number" id="number" [(ngModel)]="number" name="number" required />
+  </div>
+  <br>
+  <button type="submit">Generate Multiplication Table</button>
+</form>
+
+<div *ngIf="multiplicationTable.length > 0">
+  <h3>Multiplication Table for {{ number }}:</h3>
+  <ul>
+    <li *ngFor="let value of multiplicationTable; let i = index">
+      {{ number }} x {{ i + 1 }} = {{ value }}
+    </li>
+  </ul>
+</div>
