@@ -1,0 +1,23 @@
+<form (ngSubmit)="calculate()" #calculatorForm="ngForm">
+  <div><br>
+    <label for="num1">Number 1:</label>&nbsp;&nbsp;
+    <input type="number" id="num1" [(ngModel)]="num1" name="num1" required />
+  </div>
+  <div>
+    <label for="num2">Number 2:</label>&nbsp;&nbsp;
+    <input type="number" id="num2" [(ngModel)]="num2" name="num2" required />
+  </div>
+  <div><br>
+    <button (click)="operation = 'add'" type="button">Add</button>&nbsp;&nbsp;
+    <button (click)="operation = 'subtract'" type="button">Subtract</button>&nbsp;&nbsp;
+    <button (click)="operation = 'multiply'" type="button">Multiply</button>&nbsp;&nbsp;
+    <button (click)="operation = 'divide'" type="button">Divide</button>
+  </div>
+  <br>
+  <button type="submit">Calculate</button>
+</form>
+
+<div *ngIf="result !== null">
+  <h3>Result:</h3>
+  <p>{{ result }}</p>
+</div>
