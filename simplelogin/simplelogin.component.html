@@ -1,0 +1,21 @@
+<form (ngSubmit)="login()" #loginForm="ngForm">
+  <div><br>
+    <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="email" id="email" [(ngModel)]="email" name="email" required />
+  </div>
+
+  <div><br>
+    <label for="password">Password:</label>&nbsp;&nbsp;
+    <input type="password" id="password" [(ngModel)]="password" name="password" required />
+  </div>
+  <br>
+
+  <button type="submit">Login</button>
+</form>
+
+<div *ngIf="loginSuccess === true" style="color: green;">
+  <p>Login successful!</p>
+</div>
+<div *ngIf="loginSuccess === false" style="color: red;">
+  <p>Invalid email or password.</p>
+</div>
