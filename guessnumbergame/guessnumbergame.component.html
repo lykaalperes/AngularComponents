@@ -1,0 +1,20 @@
+<div>
+  <h2>Number Guessing Game</h2>
+  <p>Guess the number between 1 and 100!</p>
+
+  <form (ngSubmit)="checkGuess()" #guessForm="ngForm">
+    <input
+      type="number"
+      [(ngModel)]="userGuess"
+      name="userGuess"
+      placeholder="Enter your guess"
+      required
+      min="1"
+      max="100"/>&nbsp;&nbsp;
+    <button type="submit">Submit Guess</button>
+  </form>
+
+  <p *ngIf="message">{{ message }}</p><br>
+
+  <button (click)="resetGame()">Restart Game</button>
+</div>
