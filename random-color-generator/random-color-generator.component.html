@@ -1,0 +1,10 @@
+<div>
+  <h2>Random Color Generator</h2>
+  <button (click)="generateRandomColor()">Generate Random Color</button>
+
+  <div class="color-display" [style.backgroundColor]="color">
+    <p>{{ color }}</p>
+  </div>
+
+  <p *ngIf="hexCode">Hex Code: {{ hexCode }}</p>
+</div>
