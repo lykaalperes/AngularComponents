@@ -1,0 +1,23 @@
+<div class="budget-tracker">
+  <h2>Simple Budget Tracker</h2>
+
+  <div class="input-form">
+    <input [(ngModel)]="description" placeholder="Description" />&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="amount" placeholder="Amount" /><br><br>
+    <button (click)="addTransaction('income')">Add Income</button>&nbsp;&nbsp;
+    <button (click)="addTransaction('expense')">Add Expense</button>
+  </div>
+
+  <h3>Transactions</h3>
+  <ul>
+    <li *ngFor="let transaction of transactions">
+      {{ transaction.description }}: {{ transaction.amount | currency }} ({{ transaction.type }})
+    </li>
+  </ul>
+
+  <div class="totals">
+    <h3>Total Income: {{ totalIncome | currency }}</h3>
+    <h3>Total Expenses: {{ totalExpenses | currency }}</h3>
+    <h3>Balance: {{ balance | currency }}</h3>
+  </div>
+</div>
