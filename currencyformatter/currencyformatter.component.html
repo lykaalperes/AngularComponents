@@ -1,0 +1,19 @@
+<div>
+  <h2>Currency Formatter</h2>
+
+  <div>
+    <label for="amount">Enter amount:</label>&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="amount" id="amount" placeholder="Enter a number">
+  </div>
+  <br>
+
+  <button (click)="formatCurrency('USD')">Format as Dollar (USD)</button>&nbsp;&nbsp;
+  <button (click)="formatCurrency('PHP')">Format as Peso (PHP)</button>&nbsp;&nbsp;
+  <button (click)="formatCurrency('EUR')">Format as Euro (EUR)</button>
+
+  <div *ngIf="formattedCurrency">
+    <h3>Formatted Currency:</h3>
+    <p>{{ formattedCurrency }}</p>
+  </div>
+  <p *ngIf="formattedCurrency === null && amount !== null">Please enter a valid amount.</p>
+</div>
