@@ -1,0 +1,21 @@
+<form (ngSubmit)="convertTemperature()" #tempForm="ngForm">
+  <div><br>
+    <label for="temperature">Enter temperature:</label>&nbsp;&nbsp;
+    <input type="number" id="temperature" [(ngModel)]="temperature" name="temperature" required />
+  </div>
+
+  <div><br>
+    <label for="convertTo">Convert to:</label>&nbsp;&nbsp;
+    <select id="convertTo" [(ngModel)]="convertTo" name="convertTo">
+      <option value="F">Fahrenheit</option>
+      <option value="C">Celsius</option>
+    </select>
+  </div>
+  <br>
+
+  <button type="submit">Convert</button>
+</form>
+
+<div *ngIf="convertedTemperature !== null">
+  <p>Converted Temperature: {{ convertedTemperature | number: '1.1-2' }}°{{ convertTo }}</p>
+</div>
