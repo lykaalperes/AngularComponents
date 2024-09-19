@@ -1,0 +1,20 @@
+<div>
+  <h2>BMI Solver</h2>
+
+  <div>
+    <label for="height">Height (m):</label>&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="height" id="height" placeholder="Enter height">
+  </div>
+
+  <div>
+    <label for="weight">Weight (kg):</label>&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="weight" id="weight" placeholder="Enter weight">
+  </div>
+  <br>
+
+  <button (click)="calculateBMI()">Calculate BMI</button>
+
+  <p *ngIf="bmi !== null">Your BMI: {{ bmi | number:'1.1-1' }}</p>
+  <p *ngIf="category">Category: {{ category }}</p>
+  <p *ngIf="bmi === null">Please enter valid height and weight.</p>
+</div>
