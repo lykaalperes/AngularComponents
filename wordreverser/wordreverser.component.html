@@ -1,0 +1,13 @@
+<form (ngSubmit)="reverseWord()" #wordReverserForm="ngForm">
+  <div><br>
+    <label for="inputWord">Enter a word:</label>&nbsp;&nbsp;
+    <input type="text" id="inputWord" [(ngModel)]="inputWord" name="inputWord" required />
+  </div>
+  <br>
+  <button type="submit">Reverse Word</button>
+</form>
+
+<div *ngIf="reversedWord">
+  <h3>Reversed Word:</h3>
+  <p>{{ reversedWord }}</p>
+</div>
