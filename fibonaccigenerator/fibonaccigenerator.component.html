@@ -1,0 +1,17 @@
+<div>
+  <h2>Fibonacci Number Generator</h2>
+
+  <div>
+    <label for="n">Enter number of terms (N):</label>&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="n" id="n" placeholder="Enter a positive integer">
+  </div>
+  <br>
+
+  <button (click)="generateFibonacci()">Generate Fibonacci Series</button>
+
+  <div *ngIf="fibonacciSeries.length > 0">
+    <h3>Fibonacci Series:</h3>
+    <p>{{ fibonacciSeries.join(', ') }}</p>
+  </div>
+  <p *ngIf="fibonacciSeries.length === 0 && n !== null">Please enter a valid positive integer.</p>
+</div>
