@@ -1,0 +1,16 @@
+<div>
+  <h2>Uppercase Greeting</h2>
+
+  <div>
+    <label for="name">Enter your name:</label>&nbsp;&nbsp;
+    <input type="text" [(ngModel)]="name" id="name" placeholder="Enter your name">
+  </div>
+  <br>
+
+  <button (click)="convertToUppercase()">Show Uppercase Name</button>
+
+  <div *ngIf="uppercaseName">
+    <h3>Your Name in Uppercase:</h3>
+    <p>{{ uppercaseName }}</p>
+  </div>
+</div>
