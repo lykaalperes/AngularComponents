@@ -1,0 +1,13 @@
+<form (ngSubmit)="checkEvenOdd()" #evenOddCheckerForm="ngForm">
+  <div><br>
+    <label for="inputNumber">Enter a number:</label>&nbsp;&nbsp;
+    <input type="number" id="inputNumber" [(ngModel)]="inputNumber" name="inputNumber" required />
+  </div>
+  <br>
+  <button type="submit">Check</button>
+</form>
+
+<div *ngIf="result !== null">
+  <h3>Result:</h3>
+  <p>{{ result }}</p>
+</div>
