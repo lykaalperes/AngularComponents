@@ -1,0 +1,20 @@
+<div>
+  <h2>Number Trivia</h2>
+
+  <div>
+    <label for="numberInput">Enter a Number:</label>&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="number" id="numberInput" placeholder="e.g. 42">
+  </div>
+  <br>
+
+  <button (click)="getNumberTrivia()">Get Trivia</button>
+
+  <div *ngIf="trivia">
+    <h3>Trivia:</h3>
+    <p>{{ trivia }}</p>
+  </div>
+
+  <div *ngIf="errorMessage">
+    <h3>{{ errorMessage }}</h3>
+  </div>
+</div>
