@@ -1,0 +1,13 @@
+<form (ngSubmit)="countCharacters()" #charForm="ngForm">
+  <div><br>
+    <label for="inputText">Enter a string:</label>&nbsp;&nbsp;
+    <input type="text" id="inputText" [(ngModel)]="inputText" name="inputText" required />
+  </div>
+  <br>
+
+  <button type="submit">Count Characters</button>
+</form>
+
+<div *ngIf="characterCount > 0">
+  <p>Character count: {{ characterCount }}</p>
+</div>
