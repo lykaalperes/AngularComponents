@@ -1,0 +1,21 @@
+<div>
+  <h2>Multiplication Checker</h2>
+
+  <div>
+    <label for="number">Number:</label>&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="number" id="number" placeholder="Enter a number">
+  </div>
+
+  <div>
+    <label for="multipleOf">Multiple Of:</label>&nbsp;&nbsp;
+    <input type="number" [(ngModel)]="multipleOf" id="multipleOf" placeholder="Enter the divisor">
+  </div>
+  <br>
+
+  <button (click)="checkMultiple()">Check</button>
+
+  <p *ngIf="isMultiple !== null">
+    {{ number }} is {{ isMultiple ? '' : 'not ' }}a multiple of {{ multipleOf }}.
+  </p>
+  <p *ngIf="isMultiple === null">Please enter valid inputs.</p>
+</div>
