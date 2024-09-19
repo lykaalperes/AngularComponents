@@ -1,0 +1,19 @@
+<div>
+  <h2>Factorial Calculator</h2>
+  <form (ngSubmit)="calculateFactorial()" #factorialForm="ngForm">
+    <label for="inputNumber">Enter a number:</label>&nbsp;&nbsp;
+    <input
+      type="number"
+      id="inputNumber"
+      [(ngModel)]="inputNumber"
+      name="inputNumber"
+      min="0"
+      required /><br><br>
+
+    <button type="submit">Calculate Factorial</button>
+  </form>
+
+  <div *ngIf="factorialResult !== null">
+    <p>Factorial: {{ factorialResult }}</p>
+  </div>
+</div>
