@@ -1,0 +1,13 @@
+<form (ngSubmit)="showUsername()" #usernameForm="ngForm">
+  <div><br>
+    <label for="username">Enter your username:</label>&nbsp;&nbsp;
+    <input type="text" id="username" [(ngModel)]="username" name="username" required />
+  </div>
+  <br>
+  <button type="submit">Show Username</button>
+</form>
+
+<div *ngIf="displayedUsername">
+  <h3>Your Username:</h3>
+  <p>{{ displayedUsername }}</p>
+</div>
