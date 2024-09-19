@@ -1,0 +1,14 @@
+<div>
+  <h2>Username Validator</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="username"
+    placeholder="Enter a username"
+  />
+
+  <br><br>
+  <button (click)="validateUsername()">Validate Username</button>
+
+  <p *ngIf="isValid !== null">{{ validationMessage }}</p>
+</div>
