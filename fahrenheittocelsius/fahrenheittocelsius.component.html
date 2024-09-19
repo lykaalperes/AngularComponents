@@ -1,0 +1,13 @@
+<form (ngSubmit)="convertToCelsius()" #tempForm="ngForm">
+  <div><br>
+    <label for="fahrenheit">Enter temperature in Fahrenheit:</label>&nbsp;&nbsp;
+    <input type="number" id="fahrenheit" [(ngModel)]="fahrenheit" name="fahrenheit" required />
+  </div>
+  <br>
+
+  <button type="submit">Convert to Celsius</button>
+</form>
+
+<div *ngIf="celsius !== null">
+  <p>{{ fahrenheit }}°F is equal to {{ celsius.toFixed(2) }}°C</p>
+</div>
