@@ -1,0 +1,17 @@
+<div>
+  <h2>Morse Code Translator</h2>
+
+  <div>
+    <h3>Text to Morse</h3>
+    <input type="text" [(ngModel)]="textInput" placeholder="Enter text" />&nbsp;&nbsp;
+    <button (click)="translateToMorse()">Translate</button>
+    <p>Morse Code: {{ morseOutput }}</p>&nbsp;&nbsp;
+  </div>
+
+  <div>
+    <h3>Morse to Text</h3>
+    <input type="text" [(ngModel)]="textInput" placeholder="Enter Morse code (space-separated)" />&nbsp;&nbsp;
+    <button (click)="translateToText()">Translate</button>
+    <p>Text: {{ morseOutput }}</p>&nbsp;&nbsp;
+  </div>
+</div>
